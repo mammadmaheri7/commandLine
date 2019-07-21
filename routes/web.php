@@ -18,3 +18,10 @@ Route::get('/', function () {
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('cmds', 'CMDController');
+
+Route::get('/hierarchical','hierarchicalController@index');
+Route::get('/hierarchical/des/{id}','hierarchicalController@showTree');
+Route::get('/hierarchical/ans/{id}','hierarchicalController@showAns');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
